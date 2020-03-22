@@ -9,6 +9,6 @@ SetTime <-strptime(paste(plotdates$Date, plotdates$Time, sep=" "),"%d/%m/%Y %H:%
 plotdates <- cbind(SetTime, plotdates)
 
 #construct plot2.png
-dev.copy(png, file="plot2.png")
+dev.copy(png, file="plot2.png", width=480, height=480)
 plot(plotdates$SetTime, plotdates$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
