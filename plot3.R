@@ -9,7 +9,7 @@ SetTime <-strptime(paste(plotdates$Date, plotdates$Time, sep=" "),"%d/%m/%Y %H:%
 plotdates <- cbind(SetTime, plotdates)
 
 #construct plot3.png
-dev.copy(png, file="plot3.png", width=480, height=480)
+png("plot3.png", width = 480, height = 480)
 
 with(plotdates, {
     plot(SetTime, Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
