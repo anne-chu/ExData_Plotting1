@@ -9,7 +9,7 @@ SetTime <-strptime(paste(plotdates$Date, plotdates$Time, sep=" "),"%d/%m/%Y %H:%
 plotdates <- cbind(SetTime, plotdates)
 
 #construct plot4.png
-dev.copy(png, file="plot4.png", width=480, height=480)
+png("plot4.png", width = 480, height = 480)
 
 par(mfrow=c(2,2))
 
